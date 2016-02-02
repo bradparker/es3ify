@@ -108,7 +108,7 @@ function transform(code) {
 }
 
 function process(file) {
-    if (/\.json$/.test(file)) return through();
+    if (/(\.json|\.css)$/.test(file)) return through();
     var data = '';
     function write(chunk) {
         data += chunk;
